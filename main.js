@@ -18,7 +18,12 @@ function likeCallback(e) {
       }
 
     })
-    .catch()
+    .catch((error) => {
+      console.error(error);
+      const modal = document.getElementById('modal')
+      console.log(modal)
+      modal.remove("hidden");
+    });
 
 }
 
